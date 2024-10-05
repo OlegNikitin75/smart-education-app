@@ -1,0 +1,1 @@
+export {AdminRegisterCoursePage} from './ui'

@@ -1,20 +1,33 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
 const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-    },
-  },
-  plugins: [],
-};
-export default config;
+	content: [
+		'./app/**/*.{js,ts,jsx,tsx,mdx}',
+		'./src/**/*.{js,ts,jsx,tsx,mdx}'
+	],
+	theme: {
+		fontFamily: {
+			play400: ['"Play Regular"', 'sans-serif'],
+			play700: ['"Play Bold"', 'sans-serif']
+		},
+		extend: {
+			colors:
+			{
+				'app-black':'#000000',
+				'app-dark':'#17191C',
+				'app-white':'#F8F9FA',
+				'app-green':'#caffbf',
+				'app-light-blue':'#9BF6FF',
+				'app-red':'#FFADAD',
+				'app-violet':'#BDB2FF',
+				'app-pink':'#FFC6FF',
+				'app-yellow':'#FDFFB6',
+				'app-orange':'#FFD6A5',
+				'app-gray':'#292E33',
+				'app-light-gray':'#6C757D',
+			}
+		}
+	},
+	plugins: []
+}
+export default config

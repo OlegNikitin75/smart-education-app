@@ -1,0 +1,1 @@
+export {AdminRegisterAdminPage} from './ui'

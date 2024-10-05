@@ -1,0 +1,1 @@
+export {AdminSingleCoursePage} from './ui'

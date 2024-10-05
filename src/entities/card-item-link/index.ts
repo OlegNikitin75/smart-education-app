@@ -1,0 +1,1 @@
+export { CardItemLink } from './ui'

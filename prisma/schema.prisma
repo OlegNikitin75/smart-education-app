@@ -1,0 +1,110 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Task {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  label           String? @default("ПЗ")
+  description     String?
+  isPassed        Boolean @default(false)
+  exampleImageUrl String? @map("example_image_url")
+  dataImageUrl    String? @map("data_image_url")
+  course          Course? @relation(fields: [courseId], references: [id])
+  courseId        String? @db.ObjectId
+
+  @@map("task")
+}
+
+model GraphicWork {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  label     String?  @default("РГР")
+  title     String?
+  isPassed  Boolean  @default(false)
+  course    Course?  @relation(fields: [courseId], references: [id])
+  courseId  String?  @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("graphic_work")
+}
+
+model VerificationWork {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  label     String?  @default("КР")
+  score     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  course    Course?  @relation(fields: [courseId], references: [id])
+  courseId  String?  @db.ObjectId
+
+  @@map("verification_work")
+}
+
+model Course {
+  id                       String             @id @default(auto()) @map("_id") @db.ObjectId
+  name                     String
+  faculty                  String
+  color                    String
+  image                    String
+  semester                 String
+  numberOfTask             String
+  numberOfGraphicWork      String
+  numberOfVerificationWork String
+  tasks                    Task[]
+  graphicWorks             GraphicWork[]
+  verificationWorks        VerificationWork[]
+  examScore                String?
+  creditScore              String?
+  user                     User?              @relation(fields: [userId], references: [id])
+  userId                   String?            @db.ObjectId
+  createdAt                DateTime           @default(now())
+  updatedAt                DateTime           @updatedAt
+
+  @@map("course")
+}
+
+model Group {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  title     String   @unique
+  users     User[]   @relation(fields: [usersIDs], references: [id])
+  usersIDs  String[] @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("group")
+}
+
+model User {
+  id                String   @id @default(auto()) @map("_id") @db.ObjectId
+  firstName         String
+  middleName        String
+  lastName          String
+  role              Role
+  post              String?
+  groups            Group[]  @relation(fields: [groupIDs], references: [id])
+  groupIDs          String[] @db.ObjectId
+  courses           Course[]
+  login             String   @unique
+  loginVerificated  Boolean? @default(false)
+  password          String
+  hashedPassword    String
+  verificationToken String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@map("user")
+}
+
+enum Role {
+  ADMIN
+  STUDENT
+  TEACHER
+}
