@@ -1,2 +1,2 @@
-import { SchedulePage } from '@/pages/schedule-page';
+import { SchedulePage } from '@/pages/schedule-page'
 export default SchedulePage

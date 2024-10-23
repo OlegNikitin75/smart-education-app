@@ -7,7 +7,7 @@ declare module 'next-auth' {
 			firstName: string
 			middleName: string
 			lastName: string
-			post:string
+			post: string
 			role: $Enums.Role
 			groups: string
 			login: string
@@ -20,7 +20,7 @@ declare module 'next-auth' {
 		firstName: string
 		middleName: string
 		lastName: string
-		post:string
+		post: string
 		role: $Enums.Role
 		groups: string
 		login: string
@@ -35,7 +35,7 @@ declare module 'next-auth/jwt' {
 			firstName: string
 			middleName: string
 			lastName: string
-			post:string
+			post: string
 			role: $Enums.Role
 			groups: string
 			login: string

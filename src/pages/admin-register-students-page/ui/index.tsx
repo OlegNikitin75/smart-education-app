@@ -17,8 +17,8 @@ export const AdminRegisterStudentsPage = async () => {
 
 	if (!session) redirect(NAVIGATION.main)
 	if (session.user.role !== 'ADMIN') return <AccessDenied />
-	
-	if (session) 
+
+	if (session)
 		return (
 			<AdminPageLayout
 				header={
@@ -32,7 +32,7 @@ export const AdminRegisterStudentsPage = async () => {
 					/>
 				}
 			>
-					<CreateStudent />
+				<CreateStudent />
 			</AdminPageLayout>
 		)
-	}
+}

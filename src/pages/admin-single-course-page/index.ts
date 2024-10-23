@@ -1,1 +1,1 @@
-export {AdminSingleCoursePage} from './ui'
+export { AdminSingleCoursePage } from './ui'

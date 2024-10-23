@@ -11,8 +11,7 @@ export const authOptions = {
 		strategy: 'jwt'
 	},
 	pages: {
-		signIn: '/login',
-		
+		signIn: '/login'
 	},
 	providers: [
 		CredentialsProvider({
@@ -47,7 +46,7 @@ export const authOptions = {
 						firstName: existingUser.firstName,
 						middleName: existingUser.middleName,
 						lastName: existingUser.lastName,
-						post:existingUser.post,
+						post: existingUser.post,
 						login: existingUser.login,
 						role: existingUser.role,
 						groups: existingUser.groupIDs,

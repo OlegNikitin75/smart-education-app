@@ -2,17 +2,13 @@
 import { usePathname } from 'next/navigation'
 import { UiContainer, UiLink } from '.'
 import { NAVIGATION } from '../constants/navigation'
-import {
-	HomeMenuSvgComponent,
-	UserMenuSvgComponent
-} from '../icons'
-
+import { HomeMenuSvgComponent, UserMenuSvgComponent } from '../icons'
 
 export const UiAdminFooter = () => {
 	const pathname = usePathname()
 
 	return (
-		<footer className='min-h-[90px] mb-0 mt-auto rounded-tl-2xl rounded-tr-2xl bg-app-black py-5'>
+		<footer className='mb-0 mt-auto min-h-[90px] rounded-tl-2xl rounded-tr-2xl bg-app-black py-5'>
 			<UiContainer>
 				<nav className=''>
 					<ul className='mx-auto flex items-center justify-between'>
@@ -30,7 +26,7 @@ export const UiAdminFooter = () => {
 								)}
 							</UiLink>
 						</li>
-					
+
 						<li className='w-1/4'>
 							<UiLink
 								className={`${pathname === NAVIGATION.admin_profile ? 'bg-app-green' : ''}`}

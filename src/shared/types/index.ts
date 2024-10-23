@@ -6,8 +6,8 @@ export interface IRegisterGroupData {
 }
 
 export interface ICreateCourseData {
-	semester:string
-	secondSemester:string
+	semester: string
+	secondSemester: string
 	name: string
 	color: string
 	image: string
@@ -29,10 +29,10 @@ export interface ICreateUserData {
 }
 
 export interface ITaskDescriptionData {
-	id:string|undefined|string[]
+	id: string | undefined | string[]
 	description: string
 }
 export interface IUpdatedTaskData {
-	id:string|undefined|string[]
+	id: string | undefined | string[]
 	pathExampleTaskImage: string
 }

@@ -38,37 +38,37 @@ export const AdminAdminsPage = async () => {
 				/>
 			}
 		>
-				<div className='flex h-full flex-col justify-between py-5'>
-					{dataAdmins.length === 0 && (
-						<UiListEmpty
-							image={<UsersSvgComponent />}
-							message={
-								<UiHeading tag='h2' className='uppercase text-app-white'>
-									Здесь пока никого нет
-								</UiHeading>
-							}
-							desc={
-								<p className='text-app-light-gray'>
-									Нажмите на кнопку ниже, чтобы добавить нового администратора
-								</p>
-							}
+			<div className='flex h-full flex-col justify-between py-5'>
+				{dataAdmins.length === 0 && (
+					<UiListEmpty
+						image={<UsersSvgComponent />}
+						message={
+							<UiHeading tag='h2' className='uppercase text-app-white'>
+								Здесь пока никого нет
+							</UiHeading>
+						}
+						desc={
+							<p className='text-app-light-gray'>
+								Нажмите на кнопку ниже, чтобы добавить нового администратора
+							</p>
+						}
+					/>
+				)}
+
+				<ul className='flex flex-col gap-4 overflow-scroll pb-5'>
+					{dataAdmins?.map(admin => (
+						<UserCard
+							key={admin.id}
+							data={admin}
+							deleteItems={deleteAdminsItem}
 						/>
-					)}
+					))}
+				</ul>
 
-					<ul className='flex flex-col gap-4 overflow-scroll pb-5'>
-						{dataAdmins?.map(admin => (
-							<UserCard
-								key={admin.id}
-								data={admin}
-								deleteItems={deleteAdminsItem}
-							/>
-						))}
-					</ul>
-
-					<UiLink variant='add' href={NAVIGATION.admin_register_admin}>
-						Добавить администратора
-					</UiLink>
-				</div>
+				<UiLink variant='add' href={NAVIGATION.admin_register_admin}>
+					Добавить администратора
+				</UiLink>
+			</div>
 		</AdminPageLayout>
 	)
 }

@@ -28,7 +28,7 @@ export const UiCheckbox: FC<IUiCheckboxProps> = ({
 							select:
 								'flex h-full items-center justify-center rounded-md bg-app-gray px-3 text-app-white duration-300 peer-checked:bg-app-green peer-checked:text-app-dark',
 							selectUser:
-								'flex h-full items-center justify-center rounded-md bg-app-gray px-3 text-app-white duration-300 peer-checked:bg-app-green peer-checked:text-app-dark p-3',
+								'flex h-full items-center justify-center rounded-md bg-app-gray p-3 px-3 text-app-white duration-300 peer-checked:bg-app-green peer-checked:text-app-dark',
 							secondary: ''
 						}[variant]
 					)}

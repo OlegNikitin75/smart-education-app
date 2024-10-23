@@ -30,7 +30,7 @@ export const UiInput: FC<UiInputProps> = ({
 				)}
 			>
 				<label
-					className={`${variant === 'primary' ? 'text-app-dark' : 'text-app-white'} ${variant === 'numbers' ? 'inline-block pl-0' : 'pl-3'} mb-1 block font-play700`}
+					className={`${variant === 'primary' ? 'text-app-white' : 'text-app-white'} ${variant === 'numbers' ? 'inline-block pl-0' : 'pl-3'} mb-1 block font-play700`}
 				>
 					{label}
 				</label>

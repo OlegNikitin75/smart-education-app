@@ -3,9 +3,9 @@ import { redirect } from 'next/navigation'
 import { AdminPageLayout } from '@/shared/ui/layouts/admin-page-layout'
 import authOptions from '@/app/lib/authOption'
 import { NAVIGATION } from '@/shared/constants/navigation'
-import { UiAdminFooter, UiHeader, UiHeading, UiLink } from '@/shared/ui'
+import { UiHeader, UiLink } from '@/shared/ui'
 import { AccessDenied } from '@/pages/access-denied-page'
-
+import { UserSvgComponent } from '@/shared/icons'
 
 export const AdminHomePage = async () => {
 	const session = await getServerSession(authOptions)
@@ -19,16 +19,25 @@ export const AdminHomePage = async () => {
 				<UiHeader
 					leftBlock={
 						<div>
-							<UiHeading tag='h3' className='space-x-2'>
-								<span>{session?.user?.firstName}</span>
-								<span>{session?.user?.lastName}</span>
-							</UiHeading>
-							<p className='text-app-light-gray'>Администратор</p>
+							<UiLink
+								className='flex items-center gap-4'
+								variant='profile'
+								href={NAVIGATION.admin_profile}
+							>
+								<UserSvgComponent color='#F8F9FA' />
+
+								<span className='flex flex-col'>
+									<span className='space-x-1'>
+										<span>{session?.user?.firstName}</span>
+										<span>{session?.user?.lastName}</span>
+									</span>
+									<span className='text-app-light-gray'>Администратор</span>
+								</span>
+							</UiLink>
 						</div>
 					}
 				/>
 			}
-			footer={<UiAdminFooter />}
 		>
 			<div className='flex flex-col gap-4 py-5'>
 				<UiLink variant='secondary' href={NAVIGATION.admin_courses}>

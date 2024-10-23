@@ -5,9 +5,13 @@ interface IUiListEmptyProps {
 	message: ReactNode
 	desc?: ReactNode
 }
-export const UiListEmpty: FC<IUiListEmptyProps> = ({ image, message,desc }) => {
+export const UiListEmpty: FC<IUiListEmptyProps> = ({
+	image,
+	message,
+	desc
+}) => {
 	return (
-		<div className='px-3 absolute w-full text-center left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-4'>
+		<div className='absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-4 px-3 text-center'>
 			{image}
 			{message}
 			{desc}

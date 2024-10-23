@@ -1,1 +1,1 @@
-export {AdminRegisterAdminPage} from './ui'
+export { AdminRegisterAdminPage } from './ui'

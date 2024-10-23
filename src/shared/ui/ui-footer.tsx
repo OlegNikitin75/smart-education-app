@@ -9,12 +9,11 @@ import {
 	UserMenuSvgComponent
 } from '../icons'
 
-
 export const UiFooter = () => {
 	const pathname = usePathname()
 
 	return (
-		<footer className='mb-0 mt-auto rounded-tl-2xl rounded-tr-2xl bg-app-black py-5'>
+		<footer className= 'sticky bottom-0 mb-0 mt-auto rounded-tl-2xl rounded-tr-2xl bg-app-black py-5'>
 			<UiContainer>
 				<nav className=''>
 					<ul className='mx-auto flex items-center justify-between'>

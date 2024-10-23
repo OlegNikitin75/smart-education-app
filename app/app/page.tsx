@@ -1,2 +1,2 @@
-import { AppMainPage } from '@/pages/app-main-page';
+import { AppMainPage } from '@/pages/app-main-page'
 export default AppMainPage

@@ -1,6 +1,6 @@
 'use client'
 
-import { FC, useRef} from 'react'
+import { FC, useRef } from 'react'
 import { UiButton, UiLink } from '../../../shared/ui'
 import { DeleteSvgComponent } from '../../../shared/icons'
 import { NAVIGATION } from '@/shared/constants/navigation'
@@ -60,9 +60,7 @@ export const CardItemLink: FC<ICardItemLinkProps> = ({ data, deleteItems }) => {
 							<span>{data.name}</span>
 							<span className='text-app-light-gray'>
 								{data.faculty}
-								<span className='pl-4 font-play400'>
-									{data.semester}
-								</span>
+								<span className='pl-4 font-play400'>{data.semester}</span>
 							</span>
 						</UiLink>
 						<UiButton

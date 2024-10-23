@@ -2,7 +2,7 @@
 const nextConfig = {
 	reactStrictMode: true,
 	images: {
-		domains: ['res.cloudinary.com'],
+		domains: ['res.cloudinary.com']
 		// loader: 'cloudinary',
 		// path:'https://res.cloudinary.com/dakehatrn/image/upload/'
 	},
@@ -10,10 +10,9 @@ const nextConfig = {
 		if (!isServer) {
 			config.resolve.fallback.fs = false
 		}
-	
-		return config
-	},
-}
 
+		return config
+	}
+}
 
 export default nextConfig

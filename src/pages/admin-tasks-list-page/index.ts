@@ -1,1 +1,1 @@
-export {AdminTasksListPage} from './ui'
+export { AdminTasksListPage } from './ui'

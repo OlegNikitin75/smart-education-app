@@ -6,11 +6,7 @@ interface ICoursesPageProps {}
 
 export const CoursesPage: FC<ICoursesPageProps> = ({}) => {
 	return (
-		<AppPageLayout
-			header={
-				<UiHeader leftBlock='left' middleBlock='heading' rightBlock='right' />
-			}
-		>
+		<AppPageLayout header={<UiHeader leftBlock='left' middleBlock='heading' />}>
 			HomePage
 		</AppPageLayout>
 	)

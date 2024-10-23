@@ -1,1 +1,1 @@
-export {CreateGroup} from './ui'
+export { CreateGroup } from './ui'

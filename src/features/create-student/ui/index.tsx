@@ -126,7 +126,7 @@ export const CreateStudent = () => {
 				</div>
 				<div>
 					<UiInput
-						variant='secondary'
+						variant='primary'
 						label='Фамилия студента'
 						error={errors?.lastName}
 						inputProps={{

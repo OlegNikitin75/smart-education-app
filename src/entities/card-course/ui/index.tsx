@@ -25,8 +25,8 @@ export const CardCourse: FC<ICardCourseProps> = ({
 		<article
 			className={`${color} ${image} flex h-44 w-full flex-col justify-between rounded-2xl bg-right-bottom bg-no-repeat p-3`}
 		>
-			<UiHeading tag='h2'>{title}</UiHeading>
-			<UiHeading tag='h2' className='flex gap-2 items-baseline'>
+			<UiHeading tag='h2' className='text-app-black'>{title}</UiHeading>
+			<UiHeading tag='h2' className='flex items-baseline gap-2 text-app-black'>
 				{faculty}
 				<p className='text-lg text-app-dark'>{semester}</p>
 			</UiHeading>

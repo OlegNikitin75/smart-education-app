@@ -53,13 +53,12 @@ export const AppMainPage: FC<IAppMainPageProps> = async ({}) => {
 			}
 			footer={<UiFooter />}
 		>
-					{session?.user?.role === 'TEACHER' && (
+			{session?.user?.role === 'TEACHER' && (
 				<div className='text-app-light-blue'>AppMainPageTeacher</div>
 			)}
 			{session?.user?.role === 'STUDENT' && (
 				<div className='text-app-light-blue'>AppMainPageStudent</div>
 			)}
-		
 		</AppPageLayout>
 	)
 }

@@ -1,1 +1,1 @@
-export {SchedulePage} from './ui'
+export { SchedulePage } from './ui'

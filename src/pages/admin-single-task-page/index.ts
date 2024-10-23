@@ -1,1 +1,1 @@
-export { AdminSingleTaskPage } from './ui';
+export { AdminSingleTaskPage } from './ui'

@@ -16,11 +16,11 @@ export const UiErrorMessage: FC<IUiErrorMessageProps> = ({
 			<div></div>
 			<div className='flex flex-col items-center gap-6'>
 				<ErrorSvgComponent />
-				<div className='text-center font-play700 text-4xl text-app-white leading-normal'>
+				<div className='text-center font-play700 text-4xl leading-normal text-app-white'>
 					{message}
 				</div>
 			</div>
-			<UiButton onClick={handleClose} variant='secondary'>
+			<UiButton onClick={handleClose} variant='primary'>
 				Закрыть
 			</UiButton>
 		</div>

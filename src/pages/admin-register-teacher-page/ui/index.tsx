@@ -12,7 +12,7 @@ export const AdminRegisterTeacherPage = async () => {
 
 	if (!session) redirect(NAVIGATION.main)
 	if (session.user.role !== 'ADMIN') return <AccessDenied />
-	
+
 	return (
 		<AdminPageLayout
 			header={

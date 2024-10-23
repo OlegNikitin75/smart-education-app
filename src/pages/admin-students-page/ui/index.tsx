@@ -18,11 +18,10 @@ import { AccessDenied } from '@/pages/access-denied-page'
 
 export const AdminStudentsPage = async () => {
 	const dataStudents = await getAllStudents()
-	const session =await getServerSession(authOptions)
+	const session = await getServerSession(authOptions)
 
 	if (!session) redirect(NAVIGATION.main)
 	if (session.user.role !== 'ADMIN') return <AccessDenied />
-
 
 	return (
 		<AdminPageLayout

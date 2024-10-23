@@ -11,7 +11,7 @@ export async function POST(request: NextRequest) {
 			lastName,
 			role,
 			login,
-			password,
+			password
 		}: ICreateUserData = await request.json()
 
 		const existingUser = await db.user.findFirst({
@@ -34,9 +34,8 @@ export async function POST(request: NextRequest) {
 			)
 		}
 		const hashedPassword = await bcrypt.hash(password, 10)
-		
+
 		const newUser = await db.user.create({
-		
 			data: {
 				firstName,
 				middleName,
@@ -44,7 +43,7 @@ export async function POST(request: NextRequest) {
 				role,
 				login,
 				password,
-				hashedPassword,
+				hashedPassword
 			}
 		})
 

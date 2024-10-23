@@ -12,7 +12,7 @@ body,
 }
 
 body {
-	@apply bg-app-dark font-play400 lg:flex lg:items-center lg:justify-between lg:bg-app-white;
+	@apply bg-app-dark font-play400 lg:flex lg:items-center lg:justify-between;
 }
 input {
 	@apply outline-none;
@@ -61,5 +61,4 @@ form ol li {
 	-ms-overflow-style: none;
 	scrollbar-width: none;
 }
-
 

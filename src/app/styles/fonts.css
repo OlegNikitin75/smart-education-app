@@ -1,9 +1,8 @@
-
 @font-face {
-  font-family: "Play Regular";
-  src: url("../../shared/assets/fonts/Play-Regular.woff");
+	font-family: 'Play Regular';
+	src: url('../../shared/assets/fonts/Play-Regular.woff');
 }
 @font-face {
-  font-family: "Play Bold";
-  src: url("../../shared/assets/fonts/Play-Bold.woff");
+	font-family: 'Play Bold';
+	src: url('../../shared/assets/fonts/Play-Bold.woff');
 }

@@ -71,8 +71,6 @@ const deleteItems = async (id: string) => {
 export const AdminSingleGroupPage: FC<IAdminSingleCGroupPageProps> = async ({
 	params
 }) => {
-
-
 	const group = await getGroup(params.id[0])
 	const dataStudents = await getAllStudents(params.id[0])
 
@@ -95,45 +93,45 @@ export const AdminSingleGroupPage: FC<IAdminSingleCGroupPageProps> = async ({
 					/>
 				}
 			>
-					<div className='flex h-full flex-col justify-between py-5'>
-						{dataStudents.length === 0 && (
-							<UiListEmpty
-								image={<UsersSvgComponent />}
-								message={
-									<UiHeading tag='h2' className='uppercase text-app-white'>
-										Здесь пока никого нет
-									</UiHeading>
-								}
-								desc={
-									<p className='text-app-light-gray'>
-										Нажмите на кнопку ниже, чтобы добавить студентов в группу
-									</p>
-								}
+				<div className='flex h-full flex-col justify-between py-5'>
+					{dataStudents.length === 0 && (
+						<UiListEmpty
+							image={<UsersSvgComponent />}
+							message={
+								<UiHeading tag='h2' className='uppercase text-app-white'>
+									Здесь пока никого нет
+								</UiHeading>
+							}
+							desc={
+								<p className='text-app-light-gray'>
+									Нажмите на кнопку ниже, чтобы добавить студентов в группу
+								</p>
+							}
+						/>
+					)}
+					<ul className='flex flex-col gap-4 overflow-scroll pb-5'>
+						{dataStudents.map((student, index) => (
+							<UserCard
+								key={student.id}
+								data={student}
+								groupTitle={dataStudents[index].groups[0].title}
+								deleteItems={deleteItems}
 							/>
-						)}
-						<ul className='flex flex-col gap-4 overflow-scroll pb-5'>
-							{dataStudents.map((student, index) => (
-								<UserCard
-									key={student.id}
-									data={student}
-									groupTitle={dataStudents[index].groups[0].title}
-									deleteItems={deleteItems}
-								/>
-							))}
-						</ul>
+						))}
+					</ul>
 
-						<div className='mb-0 mt-auto space-y-4'>
-							<UiLink
-								variant='add'
-								href={{
-									pathname: NAVIGATION.admin_register_student,
-									query: { _id: group?.id, title: group?.title }
-								}}
-							>
-								Добавить студента
-							</UiLink>
-						</div>
+					<div className='mb-0 mt-auto space-y-4'>
+						<UiLink
+							variant='add'
+							href={{
+								pathname: NAVIGATION.admin_register_student,
+								query: { _id: group?.id, title: group?.title }
+							}}
+						>
+							Добавить студента
+						</UiLink>
 					</div>
+				</div>
 			</AdminPageLayout>
 		</>
 	)

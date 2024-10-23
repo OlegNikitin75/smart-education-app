@@ -7,10 +7,10 @@ export const getSheetTasks = async (id: string) => {
 		},
 		select: {
 			id: true,
-			label: true,
+			label: true
 		},
 		orderBy: {
-			label:'asc'
+			label: 'asc'
 		}
 	})
 	return response

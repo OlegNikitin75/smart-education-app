@@ -4,16 +4,16 @@ import { UiFooter } from '..'
 interface IAppPageLayoutProps {
 	header: ReactNode
 	children: ReactNode
-	footer?:ReactNode
+	footer?: ReactNode
 }
 
 export const AppPageLayout: FC<IAppPageLayoutProps> = ({
 	header,
 	children,
-	footer,
+	footer
 }) => {
 	return (
-		<div className='flex h-full flex-col  bg-app-dark'>
+		<div className='flex h-full flex-col bg-app-dark'>
 			{header}
 			<main className='h-full px-3'>{children}</main>
 			{footer}

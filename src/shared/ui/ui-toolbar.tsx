@@ -19,7 +19,7 @@ interface IUiToolbarProps {
 export const UiToolbar: FC<IUiToolbarProps> = ({ editor, content }) => {
 	if (!editor) return null
 	return (
-		<div className='mb-3  w-full space-y-5 rounded-2xl border border-app-light-gray px-3 py-4'>
+		<div className='mb-3 w-full space-y-5 rounded-2xl border border-app-light-gray px-3 py-4'>
 			<div className='flex w-full items-center justify-between gap-4'>
 				<button
 					onClick={event => {
@@ -107,11 +107,7 @@ export const UiToolbar: FC<IUiToolbarProps> = ({ editor, content }) => {
 					<TtRedoSvgComponent />
 				</button>
 			</div>
-			{content && (
-				<UiButton  variant='secondary'>
-					Готово
-				</UiButton>
-			)}
+			{content && <UiButton variant='secondary'>Готово</UiButton>}
 		</div>
 	)
 }

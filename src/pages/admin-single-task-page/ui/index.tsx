@@ -9,12 +9,12 @@ import { AdminPageLayout } from '@/shared/ui/layouts'
 import { getTask } from '@/app/actions/get-task'
 import { AddTaskDescription } from '@/features/add-task-description'
 import { AccessDenied } from '@/pages/access-denied-page'
-import { UploadExampleTaskFile } from '@/features/upload-example-task-file'
-import { UploadDataTaskFile } from '@/features/upload-data-task-file'
+import { UploadDataTaskUrl } from '@/features/upload-data-task-url'
 
 interface IAdminSingleTaskPageProps {
 	params: {
 		slug: string
+		id:string
 	}
 }
 
@@ -25,8 +25,6 @@ export const AdminSingleTaskPage: FC<IAdminSingleTaskPageProps> = async ({
 
 	const dataTasks = await getAllTasks(params.id)
 
-	//console.log(dataTasks[0].tasks)
-	console.log(params.slug)
 
 	const session = await getServerSession(authOptions)
 
@@ -47,10 +45,9 @@ export const AdminSingleTaskPage: FC<IAdminSingleTaskPageProps> = async ({
 					/>
 				}
 			>
-				<div className='flex h-full flex-col py-5 gap-5'>
-						<AddTaskDescription/>
-						<UploadDataTaskFile/> 
-						<UploadExampleTaskFile/>
+				<div className='flex h-full flex-col gap-5 py-5'>
+					<AddTaskDescription />
+					<UploadDataTaskUrl />
 				</div>
 			</AdminPageLayout>
 		</>

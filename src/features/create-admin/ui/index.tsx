@@ -176,7 +176,7 @@ export const CreateAdmin = () => {
 					</UiButton>
 
 					<UiButton
-						variant='secondary'
+						variant='primary'
 						type='submit'
 						onClick={() => window.scrollTo({ top: 0 })}
 					>

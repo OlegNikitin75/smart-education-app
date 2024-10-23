@@ -1,2 +1,2 @@
-import { CoursesPage } from '@/pages/courses-page';
+import { CoursesPage } from '@/pages/courses-page'
 export default CoursesPage

@@ -1,1 +1,1 @@
-export {CreateAdmin} from './ui'
+export { CreateAdmin } from './ui'

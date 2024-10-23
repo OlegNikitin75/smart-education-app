@@ -1,2 +1,2 @@
-import { AdminTeachersPage } from '@/pages/admin-teachers-page';
+import { AdminTeachersPage } from '@/pages/admin-teachers-page'
 export default AdminTeachersPage

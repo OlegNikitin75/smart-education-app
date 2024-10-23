@@ -14,7 +14,7 @@ import {
 import { AccessDenied } from '@/pages/access-denied-page'
 
 export const AdminRegisterAdminPage = async () => {
-	const session =  await getServerSession(authOptions)
+	const session = await getServerSession(authOptions)
 
 	if (!session) redirect(NAVIGATION.main)
 	if (session.user.role !== 'ADMIN') return <AccessDenied />
@@ -32,7 +32,7 @@ export const AdminRegisterAdminPage = async () => {
 				/>
 			}
 		>
-				<CreateAdmin />
+			<CreateAdmin />
 		</AdminPageLayout>
 	)
 }

@@ -3,20 +3,35 @@
 import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { signIn } from 'next-auth/react'
-import { LockSvgComponent, UserSvgComponent } from '@/shared/icons'
+import {
+	EyeSlashSvgComponent,
+	EyeSvgComponent,
+	LockSvgComponent,
+	UserSvgComponent
+} from '@/shared/icons'
 import { UiButton, UiErrorMessage, UiInput, UiLoader } from '@/shared/ui'
 import { useRouter } from 'next/navigation'
 import { NAVIGATION } from '@/shared/constants/navigation'
 
-interface ILoginData {
+export interface ILoginData {
 	login: string
 	password: string
 }
 
 export const Login = () => {
+	const [showPassword, setShowPassword] = useState(false)
+	const [currentType, setCurrentType] = useState('password')
 	const [loading, setLoading] = useState(false)
 	const [isError, setIsError] = useState(false)
 	const [isServerError, setIsServerError] = useState(false)
+
+	const handleClick = () => {
+		setShowPassword(!showPassword)
+		console.log(showPassword)
+		currentType === 'password'
+			? setCurrentType('text')
+			: setCurrentType('password')
+	}
 	const {
 		register,
 		handleSubmit,
@@ -69,14 +84,14 @@ export const Login = () => {
 						</p>
 					)}
 				</div>
-				<div>
+				<div className='relative'>
 					<UiInput
 						icon={<LockSvgComponent color='#6C757D' />}
 						label='Пароль'
 						error={errors?.password}
 						inputProps={{
 							placeholder: '********',
-							type: 'password',
+							type: currentType,
 							...register('password', { required: 'Это поле обязательно' })
 						}}
 					/>
@@ -85,6 +100,18 @@ export const Login = () => {
 							{errors.login?.message}
 						</p>
 					)}
+
+					{
+						showPassword
+					}
+					<UiButton
+						onClick={handleClick}
+						type='button'
+						variant='icon'
+						className='absolute right-4 top-1/2'
+					>
+						{showPassword ? <EyeSvgComponent /> : <EyeSlashSvgComponent />}
+					</UiButton>
 				</div>
 
 				<UiButton variant='primary'>Войти</UiButton>

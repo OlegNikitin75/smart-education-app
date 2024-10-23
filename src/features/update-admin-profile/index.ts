@@ -1,1 +1,1 @@
-export {UpdateAdminProfile} from './ui'
+export { UpdateAdminProfile } from './ui'

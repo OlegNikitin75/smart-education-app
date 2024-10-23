@@ -13,13 +13,12 @@ export const Logout = () => {
 	}
 	return (
 		<UiButton
-			variant='secondary'
+			variant='primary'
 			onClick={handleLogout}
-			className='flex justify-center items-center gap-2'
+			className='flex items-center justify-center gap-2'
 		>
 			Выйти
-				<LogoutSvgComponent/>
-			
+			<LogoutSvgComponent />
 		</UiButton>
 	)
 }

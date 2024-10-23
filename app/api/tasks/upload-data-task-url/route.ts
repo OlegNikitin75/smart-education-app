@@ -3,8 +3,7 @@ import { NextRequest, NextResponse } from 'next/server'
 
 export async function POST(request: NextRequest) {
 	try {
-		const { id, dataImage } = await request.json()
-
+		const { id, exampleUrl,taskUrl } = await request.json()
 
 		const updatedTask = await db.task.update({
 			where: {
@@ -12,7 +11,8 @@ export async function POST(request: NextRequest) {
 			},
 
 			data: {
-				dataImageUrl: dataImage
+				exampleImageUrl: exampleUrl,
+				dataImageUrl: taskUrl
 			}
 		})
 

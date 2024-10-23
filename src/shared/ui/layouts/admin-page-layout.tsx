@@ -1,4 +1,5 @@
 import { FC, ReactNode } from 'react'
+import { UiContainer } from '../ui-container'
 
 interface IAdminPageLayoutProps {
 	header?: ReactNode
@@ -12,14 +13,9 @@ export const AdminPageLayout: FC<IAdminPageLayoutProps> = ({
 	footer
 }) => {
 	return (
-		
-		<div className='relative  mx-auto flex h-full w-full max-w-md flex-col overflow-y-scroll bg-app-dark lg:h-[90%] lg:rounded-[40px] lg:border-4 lg:border-app-light-gray lg:shadow-xl lg:shadow-slate-400'>
-		
+		<UiContainer>
 			{header}
-			<main className='h-full px-3'>{children}</main>
-			{footer}
-			
-		</div>
+			<main className='mx-auto flex-1  w-full max-w-md px-3'>{children}</main>
+		</UiContainer>
 	)
 }
-

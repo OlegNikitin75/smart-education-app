@@ -1,1 +1,1 @@
-export { AccessDenied } from './ui';
+export { AccessDenied } from './ui'

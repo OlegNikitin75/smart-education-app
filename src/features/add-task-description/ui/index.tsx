@@ -15,7 +15,7 @@ import { useParams } from 'next/navigation'
 import { togglePageScrolling } from '@/shared/libs/common'
 
 export const AddTaskDescription = () => {
-	const { handleSubmit } = useForm<ITaskDescriptionData>({
+	const { handleSubmit,reset } = useForm<ITaskDescriptionData>({
 		mode: 'all'
 	})
 	const params = useParams()
@@ -36,12 +36,13 @@ export const AddTaskDescription = () => {
 
 	const { mutate: updateTaskDescription, isPending } = useMutation({
 		mutationFn: (updatedTask: ITaskDescriptionData) => {
-			return axios.post('/api/tasks/update', updatedTask)
+			return axios.post('/api/tasks/upload-description', updatedTask)
 		},
 
 		onSuccess: () => {
 			setIsSuccess(true)
 			togglePageScrolling()
+			
 		},
 		onError: error => {
 			console.error(error)

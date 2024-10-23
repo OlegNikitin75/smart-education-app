@@ -1,1 +1,1 @@
-export {CardCourse} from './ui'
+export { CardCourse } from './ui'

@@ -1,1 +1,1 @@
-export {CreateTeacher} from './ui'
+export { CreateTeacher } from './ui'

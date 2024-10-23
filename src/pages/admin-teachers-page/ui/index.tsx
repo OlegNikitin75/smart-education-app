@@ -37,37 +37,37 @@ export const AdminTeachersPage = async () => {
 				/>
 			}
 		>
-				<div className='flex h-full flex-col justify-between py-5'>
-					{dataTeachers.length === 0 && (
-						<UiListEmpty
-							image={<UsersSvgComponent />}
-							message={
-								<UiHeading tag='h2' className='uppercase text-app-white'>
-									Здесь пока никого нет
-								</UiHeading>
-							}
-							desc={
-								<p className='text-app-light-gray'>
-									Нажмите на кнопку ниже, чтобы добавить преподавателя
-								</p>
-							}
+			<div className='flex h-full flex-col justify-between py-5'>
+				{dataTeachers.length === 0 && (
+					<UiListEmpty
+						image={<UsersSvgComponent />}
+						message={
+							<UiHeading tag='h2' className='uppercase text-app-white'>
+								Здесь пока никого нет
+							</UiHeading>
+						}
+						desc={
+							<p className='text-app-light-gray'>
+								Нажмите на кнопку ниже, чтобы добавить преподавателя
+							</p>
+						}
+					/>
+				)}
+
+				<ul className='flex flex-col gap-4 overflow-scroll pb-5'>
+					{dataTeachers?.map(teacher => (
+						<UserCard
+							key={teacher.id}
+							data={teacher}
+							deleteItems={deleteTeachersItem}
 						/>
-					)}
+					))}
+				</ul>
 
-					<ul className='flex flex-col gap-4 overflow-scroll pb-5'>
-						{dataTeachers?.map(teacher => (
-							<UserCard
-								key={teacher.id}
-								data={teacher}
-								deleteItems={deleteTeachersItem}
-							/>
-						))}
-					</ul>
-
-					<UiLink variant='add' href={NAVIGATION.admin_register_teacher}>
-						Добавить преподавателя
-					</UiLink>
-				</div>
+				<UiLink variant='add' href={NAVIGATION.admin_register_teacher}>
+					Добавить преподавателя
+				</UiLink>
+			</div>
 		</AdminPageLayout>
 	)
 }

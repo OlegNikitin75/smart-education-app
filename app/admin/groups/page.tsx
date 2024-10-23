@@ -1,2 +1,2 @@
-import { AdminGroupsPage } from '@/pages/admin-groups-page';
+import { AdminGroupsPage } from '@/pages/admin-groups-page'
 export default AdminGroupsPage

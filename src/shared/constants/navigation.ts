@@ -7,7 +7,7 @@ export const NAVIGATION = {
 	register_teachers: '/register-teachers',
 	register_deanery: '/register-deanery',
 	login: '/login',
-	access_denied:'/access-denied',
+	access_denied: '/access-denied',
 	//app paths----------------------------
 	app: '/app',
 	app_schedule: '/app/schedule',

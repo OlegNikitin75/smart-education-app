@@ -16,12 +16,11 @@ export const UiHeader: FC<IUiHeaderProps> = ({ leftBlock, middleBlock }) => {
 
 	return (
 		<header>
-				<div className='relative flex flex-1 justify-between text-app-white items-center min-h-20 px-3 py-5'>
-					{leftBlock}
-					{middleBlock}
-					{isPathname && <Notification/> }
-					
-				</div>
+			<div className='relative flex h-20 flex-1 items-center justify-between px-3 py-5 text-app-white'>
+				{leftBlock}
+				{middleBlock}
+				{isPathname && <Notification />}
+			</div>
 		</header>
 	)
 }

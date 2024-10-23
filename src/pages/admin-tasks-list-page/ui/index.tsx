@@ -14,13 +14,15 @@ interface IAdminTasksListPageProps {
 	}
 }
 
-export const AdminTasksListPage:FC<IAdminTasksListPageProps> = async ( {params}) => {
+export const AdminTasksListPage: FC<IAdminTasksListPageProps> = async ({
+	params
+}) => {
 	const session = await getServerSession(authOptions)
 
 	const dataTasks = await getAllTasks(params.id)
 
-	const tasksArr = dataTasks[0].tasks.sort(((a, b) => a.id > b.id ? 1 : -1))
-	
+	const tasksArr = dataTasks[0].tasks.sort((a, b) => (a.id > b.id ? 1 : -1))
+
 	if (!session) redirect(NAVIGATION.main)
 	if (session.user.role !== 'ADMIN') return <AccessDenied />
 

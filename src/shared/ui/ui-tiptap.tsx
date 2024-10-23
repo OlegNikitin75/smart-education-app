@@ -25,10 +25,11 @@ export const UiTiptap = ({ onChange, content }: any) => {
 
 	return (
 		<div>
-			<p className='font-play700 mb-2 pl-3 text-app-white'>Добавить условие задачи</p>
+			<p className='mb-2 pl-3 font-play700 text-app-white'>
+				Добавить условие задачи
+			</p>
 			<UiToolbar editor={editor} content={content} />
 			<EditorContent style={{ whiteSpace: 'pre-line' }} editor={editor} />
-			
 		</div>
 	)
 }

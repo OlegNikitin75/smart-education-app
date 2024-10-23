@@ -11,8 +11,7 @@ export const getAllTasks = async (id: string) => {
 			graphicWorks: true,
 			verificationWorks: true
 		},
-		orderBy: {
-		}
+		orderBy: {}
 	})
 	return response
 }

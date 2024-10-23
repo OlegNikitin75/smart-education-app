@@ -13,11 +13,11 @@ import {
 import { AccessDenied } from '@/pages/access-denied-page'
 
 export const AdminRegisterGroupPage = async () => {
-	const session =await getServerSession(authOptions)
+	const session = await getServerSession(authOptions)
 
 	if (!session) redirect(NAVIGATION.main)
 	if (session.user.role !== 'ADMIN') return <AccessDenied />
-	
+
 	return (
 		<AdminPageLayout
 			header={
@@ -31,7 +31,7 @@ export const AdminRegisterGroupPage = async () => {
 				/>
 			}
 		>
-				<CreateGroup />
+			<CreateGroup />
 		</AdminPageLayout>
 	)
 }

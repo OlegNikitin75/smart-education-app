@@ -1,1 +1,1 @@
-export { AdminGroupsPage } from './ui';
+export { AdminGroupsPage } from './ui'

@@ -21,7 +21,7 @@ export const AdminSingleCoursePage: FC<
 > = async ({ params }) => {
 	const course = await getCourse(params.id)
 	const dataTasks = await getAllTasks(params.id)
-
+console.log(dataTasks[0].tasks)
 	const session = await getServerSession(authOptions)
 
 	if (!session) redirect(NAVIGATION.main)

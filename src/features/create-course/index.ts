@@ -1,1 +1,1 @@
-export {CreateCourse} from './ui'
+export { CreateCourse } from './ui'

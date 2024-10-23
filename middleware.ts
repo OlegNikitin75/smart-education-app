@@ -12,13 +12,12 @@ export default withAuth(
 				new URL(NAVIGATION.access_denied, request.url)
 			)
 		}
-
 	},
 	{
 		callbacks: {
 			authorized: ({ token }) => !!token
 		}
-	} 
+	}
 )
 export const config = {
 	matcher: [
@@ -40,12 +39,12 @@ export const config = {
 //Для входа в приложение при отсутствии в базе пользователей разкомментировать и сделать запрос /home  в адресной строке
 // import { NextResponse } from 'next/server'
 // import type { NextRequest } from 'next/server'
- 
+
 // // This function can be marked `async` if using `await` inside
 // export function middleware(request: NextRequest) {
 //   return NextResponse.redirect(new URL('/admin/admins/register', request.url))
 // }
- 
+
 // // See "Matching Paths" below to learn more
 // export const config = {
 //   matcher: '/home',

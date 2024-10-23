@@ -1,4 +1,4 @@
-export function ArrowBackSvgComponent() {
+export const ArrowBackSvgComponent = ({}) => {
 	return (
 		<svg
 			width='24'

@@ -293,7 +293,7 @@ export const CreateCourse = () => {
 				<div className='pb-5'>
 					<UiButton
 						onClick={() => window.scrollTo({ top: 0 })}
-						variant='secondary'
+						variant='primary'
 						type='submit'
 						className='mb-0 mt-auto'
 					>

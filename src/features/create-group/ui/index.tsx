@@ -89,7 +89,7 @@ export const CreateGroup = () => {
 					)}
 				</div>
 
-				<UiButton variant='secondary' type='submit'>
+				<UiButton variant='primary' type='submit'>
 					Готово
 				</UiButton>
 			</form>

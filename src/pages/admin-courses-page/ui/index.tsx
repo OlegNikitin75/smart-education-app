@@ -19,9 +19,8 @@ import {
 export const AdminCoursesPage = async () => {
 	const session = await getServerSession(authOptions)
 
-	
 	const dataCourse = await getAllCourses()
-	
+
 	if (!session) redirect(NAVIGATION.main)
 	if (session.user.role !== 'ADMIN') return <AccessDenied />
 

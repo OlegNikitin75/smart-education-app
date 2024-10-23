@@ -1,1 +1,1 @@
-export {AdminSingleGroupPage} from './ui'
+export { AdminSingleGroupPage } from './ui'

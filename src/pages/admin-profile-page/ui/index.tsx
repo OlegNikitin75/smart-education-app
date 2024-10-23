@@ -2,7 +2,7 @@ import { getServerSession } from 'next-auth'
 import { redirect } from 'next/navigation'
 import authOptions from '@/app/lib/authOption'
 import { NAVIGATION } from '@/shared/constants/navigation'
-import { UiAdminFooter, UiContainer, UiHeader, UiHeading } from '@/shared/ui'
+import { UiAdminFooter, UiContainer, UiHeader, UiHeading, UiLeftBlockHeader } from '@/shared/ui'
 import { AdminPageLayout } from '@/shared/ui/layouts/admin-page-layout'
 import { AdminSvgComponent } from '@/shared/icons'
 import { UpdateAdminProfile } from '@/features/update-admin-profile'
@@ -19,6 +19,7 @@ export const AdminProfilePage = async () => {
 		<AdminPageLayout
 			header={
 				<UiHeader
+				leftBlock={<UiLeftBlockHeader />}
 					middleBlock={
 						<UiHeading tag='h3' className='centerPosition'>
 							Ваш профиль

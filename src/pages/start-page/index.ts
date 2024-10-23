@@ -1,1 +1,1 @@
-export {StartPage} from './ui'
+export { StartPage } from './ui'
