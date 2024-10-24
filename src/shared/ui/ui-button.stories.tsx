@@ -1,10 +1,25 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { UiButton } from '.'
-import { ArrowBackSvgComponent } from '../icons'
 
 const meta: Meta<typeof UiButton> = {
-	title: 'Компоненты/Button',
+	title: 'Components/Button',
 	component: UiButton,
+	argTypes: {
+		variant: {
+			control: {
+				type: 'radio'
+			},
+			options: ['primary']
+		},
+		size: {
+			control: {
+				type: 'select'
+			},
+			
+			options: ['normal','large'],
+		
+		},
+	},
 	tags: ['autodocs']
 }
 
@@ -23,32 +38,5 @@ export const Primary: Story = {
 	args: {
 		variant: 'primary',
 		children: 'Кнопка'
-	}
-}
-export const ButtonBackSM: Story = {
-	parameters: {
-		docs: {
-			description: {
-				story: 'Кнопка для возврата на предыдущую страницу (разрешение < 1024px)'
-			}
-		}
-	},
-	args: {
-		variant: 'back',
-		children: [<ArrowBackSvgComponent />, 'Назад']
-	}
-}
-
-export const ButtonBackLG: Story = {
-	parameters: {
-		docs: {
-			description: {
-				story: 'Кнопка для возврата на предыдущую страницу (разрешение ≥ 1024px)'
-			}
-		}
-	},
-	args: {
-		variant: 'back',
-		children: [<ArrowBackSvgComponent />, 'Назад']
 	}
 }
