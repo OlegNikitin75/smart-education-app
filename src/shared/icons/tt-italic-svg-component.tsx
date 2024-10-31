@@ -1,4 +1,8 @@
-export const TtItalicSvgComponent = () => {
+export const TtItalicSvgComponent = ({
+	color = '#000000'
+}: {
+	color: string
+}) => {
 	return (
 		<svg
 			xmlns='http://www.w3.org/2000/svg'
@@ -6,7 +10,7 @@ export const TtItalicSvgComponent = () => {
 			height='24'
 			viewBox='0 0 24 24'
 			fill='none'
-			stroke='#F8F9FA'
+			stroke={color}
 			strokeWidth='2'
 			strokeLinecap='round'
 			strokeLinejoin='round'

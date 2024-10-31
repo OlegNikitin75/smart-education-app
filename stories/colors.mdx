@@ -1,11 +1,13 @@
 import { Meta, ColorPalette, ColorItem } from '@storybook/blocks'
 
-<Meta title='Colors' />
+<Meta title='System/Colors' />
+
+# Colors
 
 <ColorPalette>
     <ColorItem
     	title="app-black"
-    	subtitle="back"
+    	subtitle="black"
     	colors={{ Black: "#000000" }}
     />
     <ColorItem
@@ -13,6 +15,16 @@ import { Meta, ColorPalette, ColorItem } from '@storybook/blocks'
     	subtitle="dark"
     	colors={{ AswadBlack: "#17191C" }}
     />
+		<ColorItem
+			title='app-gray'
+ 			subtitle='gray'
+  		colors={{ NightSky: '#292E33' }}
+	 	/>
+		<ColorItem	
+			title='app-light-gray'
+			subtitle='light gray'
+			colors={{ PompeiiAsh: '#6C757D' }}
+		/>
     <ColorItem
     	title="app-white" 
 			subtitle="white"
@@ -53,14 +65,5 @@ import { Meta, ColorPalette, ColorItem } from '@storybook/blocks'
 			subtitle='orange'
 			colors={{ FreshApricot: '#FFD6A5' }}
 		/>
-		<ColorItem
-			title='app-gray'
- 			subtitle='gray'
-  		colors={{ NightSky: '#292E33' }}
-	 />
-		<ColorItem	
-			title='app-light-gray'
-			subtitle='light gray'
-			colors={{ PompeiiAsh: '#6C757D' }}
-		/>
+		
 </ColorPalette>

@@ -40,7 +40,7 @@ export const AdminCoursesPage = async () => {
 			<div className='flex h-full flex-col justify-between gap-4 py-5'>
 				{dataCourse.length === 0 && (
 					<UiListEmpty
-						image={<NotCoursesSvgComponent />}
+						image={<NotCoursesSvgComponent color='#F8F9FA' />}
 						message={
 							<UiHeading tag='h2' className='uppercase text-app-white'>
 								Учебных курсов пока нет

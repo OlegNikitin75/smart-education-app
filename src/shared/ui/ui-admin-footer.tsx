@@ -17,7 +17,7 @@ export const UiAdminFooter = () => {
 								className={`${pathname === NAVIGATION.admin ? 'bg-app-green' : ''}`}
 								variant='navigation'
 								href={NAVIGATION.admin}
-								icon={<HomeMenuSvgComponent />}
+								icon={<HomeMenuSvgComponent color='#6C757D' />}
 							>
 								{pathname === NAVIGATION.admin && (
 									<span className='font-play400 text-[10px] text-app-dark'>
@@ -32,7 +32,7 @@ export const UiAdminFooter = () => {
 								className={`${pathname === NAVIGATION.admin_profile ? 'bg-app-green' : ''}`}
 								variant='navigation'
 								href={NAVIGATION.admin_profile}
-								icon={<UserMenuSvgComponent />}
+								icon={<UserMenuSvgComponent color='#6C757D' />}
 							>
 								{pathname === NAVIGATION.admin_profile && (
 									<span className='font-play400 text-[10px] text-app-dark'>

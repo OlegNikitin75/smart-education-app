@@ -1,0 +1,45 @@
+import { Meta, Typeset } from '@storybook/blocks'
+
+<Meta title='System/Typography' />
+
+export const typography = {
+	type: {
+		primary: '"Play Bold", sans-serif'
+	},
+	weight: {
+		headings: {
+			bold: '700'
+		},
+		text: {
+			regular: '400'
+		}
+	},
+	size: {
+		s1: 12,
+		s2: 14,
+		s3: 16,
+		s4: '18px',
+		m1: 20,
+		m2: '24px',
+		m3: 28,
+		l1: 32,
+		l2: 40,
+		l3: '48px'
+	}
+}
+
+# Headings
+
+**Font:** Play Bold
+
+**Weights:** 700(bold)
+
+export const SampleText =
+	['Заголовок']
+
+<Typeset
+	fontSizes={[typography.size.l3, typography.size.m2, typography.size.s4]}
+	fontWeidht={typography.weight.headings.bold}
+	sampleText={SampleText}
+	fontFamily={typography.type.primary}
+/>

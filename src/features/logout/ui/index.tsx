@@ -18,7 +18,7 @@ export const Logout = () => {
 			className='flex items-center justify-center gap-2'
 		>
 			Выйти
-			<LogoutSvgComponent />
+			<LogoutSvgComponent color='#17191C' />
 		</UiButton>
 	)
 }

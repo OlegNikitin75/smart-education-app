@@ -1,4 +1,4 @@
-export function HomeMenuSvgComponent() {
+export function HomeMenuSvgComponent({ color = '#000000' }: { color: string }) {
 	return (
 		<svg
 			width='24'
@@ -11,7 +11,7 @@ export function HomeMenuSvgComponent() {
 				fillRule='evenodd'
 				clipRule='evenodd'
 				d='M9.5 20.5V16C9.5 14.619 10.619 13.5 12 13.5V13.5C13.381 13.5 14.5 14.619 14.5 16V20.5H20V11.914C20 11.384 19.789 10.875 19.414 10.5L12.707 3.79301C12.316 3.40201 11.683 3.40201 11.293 3.79301L4.586 10.5C4.211 10.875 4 11.384 4 11.914V20.5H9.5Z'
-				stroke='#6C757D'
+				stroke={color}
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>

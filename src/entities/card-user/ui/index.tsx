@@ -2,7 +2,7 @@
 
 import { FC, useRef } from 'react'
 import { DeleteSvgComponent } from '../../../shared/icons'
-import { UiButton } from '../../../shared/ui'
+import { UiButton, UiIconButton } from '../../../shared/ui'
 import { useSelectItemsStore } from '@/app/store/useSelectItemsStore'
 
 interface IUserCardProps {
@@ -74,13 +74,13 @@ export const UserCard: FC<IUserCardProps> = ({
 						<span className='text-app-light-gray'>Пароль: {data.password}</span>
 					</div>
 				</article>
-				<UiButton
+				<UiIconButton
 					onClick={async () => deleteItems(data.id)}
-					variant='icon'
+					variant='basic'
 					className='min-w-16 bg-app-red'
 				>
-					<DeleteSvgComponent />
-				</UiButton>
+					<DeleteSvgComponent color='#F8F9FA' />
+				</UiIconButton>
 			</div>
 		</li>
 	)

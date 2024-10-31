@@ -33,7 +33,7 @@ export const Back: Story = {
 	},
 	args: {
 		variant: 'back',
-		children: [<ArrowBackSvgComponent key='arrowBackLg' />, 'Назад']
+		children: [<ArrowBackSvgComponent color='##CAFFBF' key='arrowBackLg' />, 'Назад']
 	}
 }
 

@@ -1,4 +1,8 @@
-export const TtUnderlineSvgComponent = () => {
+export const TtUnderlineSvgComponent = ({
+	color = '#000000'
+}: {
+	color: string
+}) => {
 	return (
 		<svg
 			xmlns='http://www.w3.org/2000/svg'
@@ -6,7 +10,7 @@ export const TtUnderlineSvgComponent = () => {
 			height='24'
 			viewBox='0 0 24 24'
 			fill='none'
-			stroke='#F8F9FA'
+			stroke={color}
 			strokeWidth='2'
 			strokeLinecap='round'
 			strokeLinejoin='round'

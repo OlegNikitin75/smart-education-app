@@ -1,4 +1,4 @@
-export function LockSvgComponent({ color }: { color: string }) {
+export function LockSvgComponent({ color = '#000000' }: { color: string }) {
 	return (
 		<svg
 			width='24'

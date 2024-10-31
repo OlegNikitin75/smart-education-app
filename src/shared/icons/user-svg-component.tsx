@@ -1,4 +1,4 @@
-export function UserSvgComponent({ color }: { color: string }) {
+export function UserSvgComponent({ color='#000000' }: { color: string }) {
 	return (
 		<svg
 			width='24'

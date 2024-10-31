@@ -1,6 +1,4 @@
-import { FC } from 'react'
-
-export const LoaderSvgComponent: FC = () => {
+export const LoaderSvgComponent = ({color='#000000'}:{color:string}) => {
 	return (
 		<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'>
 			<radialGradient
@@ -11,11 +9,11 @@ export const LoaderSvgComponent: FC = () => {
 				fy='.3125'
 				gradientTransform='scale(1.5)'
 			>
-				<stop offset='0' stopColor='#CAFFBF'></stop>
-				<stop offset='.3' stopColor='#CAFFBF' stopOpacity='.9'></stop>
-				<stop offset='.6' stopColor='#CAFFBF' stopOpacity='.6'></stop>
-				<stop offset='.8' stopColor='#CAFFBF' stopOpacity='.3'></stop>
-				<stop offset='1' stopColor='#CAFFBF' stopOpacity='0'></stop>
+				<stop offset='0' stopColor={color}></stop>
+				<stop offset='.3' stopColor={color} stopOpacity='.9'></stop>
+				<stop offset='.6' stopColor={color} stopOpacity='.6'></stop>
+				<stop offset='.8' stopColor={color} stopOpacity='.3'></stop>
+				<stop offset='1' stopColor={color} stopOpacity='0'></stop>
 			</radialGradient>
 			<circle
 				transformOrigin='center'
@@ -44,7 +42,7 @@ export const LoaderSvgComponent: FC = () => {
 				transformOrigin='center'
 				fill='none'
 				opacity='.2'
-				stroke='#CAFFBF'
+				stroke={color}
 				strokeWidth='12'
 				strokeLinecap='round'
 				cx='100'

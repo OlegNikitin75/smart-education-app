@@ -7,7 +7,7 @@ export const AccessDenied = () => {
 		<div className='mx-auto flex h-full w-full max-w-md flex-col items-center justify-between px-3 py-5 lg:h-[90%] lg:rounded-3xl lg:border-2 lg:border-app-light-gray lg:py-6'>
 			<div></div>
 			<div className='flex flex-col items-center gap-6'>
-				<DeniedSvgComponent />
+				<DeniedSvgComponent color='#FFADAD' />
 				<span className='font-play700 text-3xl text-app-light-gray'>
 					Доступ запрещен
 				</span>

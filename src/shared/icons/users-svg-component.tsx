@@ -1,4 +1,8 @@
-export const UsersSvgComponent = () => {
+export const UsersSvgComponent = ({
+	color = '#000000'
+}: {
+	color: string
+}) => {
 	return (
 		<svg
 			xmlns='http://www.w3.org/2000/svg'
@@ -6,8 +10,8 @@ export const UsersSvgComponent = () => {
 			height='64'
 			viewBox='0 0 24 24'
 			fill='none'
-			stroke='#6C757D'
-			strokeWidth='2'
+			stroke={color}
+			strokeWidth='1.5'
 			strokeLinecap='round'
 			strokeLinejoin='round'
 		>

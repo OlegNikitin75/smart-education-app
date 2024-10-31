@@ -1,4 +1,8 @@
-export function ScheduleMenuSvgComponent() {
+export function ScheduleMenuSvgComponent({
+	color = '#000000'
+}: {
+	color: string
+}) {
 	return (
 		<svg
 			width='24'
@@ -9,19 +13,19 @@ export function ScheduleMenuSvgComponent() {
 		>
 			<path
 				d='M16 2V6'
-				stroke='#6C757D'
+				stroke={color}
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>
 			<path
 				d='M8 2V6'
-				stroke='#6C757D'
+				stroke={color}
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>
 			<path
 				d='M3 9H21'
-				stroke='#6C757D'
+				stroke={color}
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>
@@ -29,13 +33,13 @@ export function ScheduleMenuSvgComponent() {
 				fillRule='evenodd'
 				clipRule='evenodd'
 				d='M19 4H5C3.895 4 3 4.895 3 6V19C3 20.105 3.895 21 5 21H19C20.105 21 21 20.105 21 19V6C21 4.895 20.105 4 19 4Z'
-				stroke='#6C757D'
+				stroke={color}
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>
 			<path
 				d='M7.01316 12.729C6.87516 12.729 6.76316 12.841 6.76416 12.979C6.76416 13.117 6.87616 13.229 7.01416 13.229C7.15216 13.229 7.26416 13.117 7.26416 12.979C7.26416 12.841 7.15216 12.729 7.01316 12.729'
-				stroke='#6C757D'
+				stroke={color}
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>

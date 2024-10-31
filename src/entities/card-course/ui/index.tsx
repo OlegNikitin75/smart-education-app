@@ -33,11 +33,11 @@ export const CardCourse: FC<ICardCourseProps> = ({
 
 			<div className='space-y-2'>
 				<div className='flex gap-2'>
-					<GraphicWorkSvgComponent />
+					<GraphicWorkSvgComponent  color='#171A1C'/>
 					<span>{numberWorks} РГР</span>
 				</div>
 				<div className='flex gap-2'>
-					<TasksSvgComponent />
+					<TasksSvgComponent color='#171A1C' />
 					<span>{numberTasks} Заданий</span>
 				</div>
 			</div>

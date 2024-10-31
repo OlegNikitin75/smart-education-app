@@ -33,7 +33,7 @@ export const Basic: Story = {
 	},
 	args: {
 		variant: 'basic',
-		children: <EyeSlashSvgComponent />
+		children: <EyeSlashSvgComponent color='#6C757D' />
 	}
 }
 export const HidePassword: Story = {

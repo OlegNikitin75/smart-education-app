@@ -1,4 +1,4 @@
-export function DeleteSvgComponent() {
+export function DeleteSvgComponent({color='#000000'}:{color:string}) {
 	return (
 		<svg
 			xmlns='http://www.w3.org/2000/svg'
@@ -6,8 +6,8 @@ export function DeleteSvgComponent() {
 			height='24'
 			viewBox='0 0 24 24'
 			fill='none'
-			stroke='#F8F9FA'
-			strokeWidth='2'
+			stroke={color}
+			strokeWidth='1'
 			strokeLinecap='round'
 			strokeLinejoin='round'
 		>

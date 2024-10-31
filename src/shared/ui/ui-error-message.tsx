@@ -15,7 +15,7 @@ export const UiErrorMessage: FC<IUiErrorMessageProps> = ({
 		<div className='absolute inset-0 z-40 flex h-full w-full flex-col justify-between bg-app-dark px-4 py-5'>
 			<div></div>
 			<div className='flex flex-col items-center gap-6'>
-				<ErrorSvgComponent />
+				<ErrorSvgComponent color='#FFADAD' />
 				<div className='text-center font-play700 text-4xl leading-normal text-app-white'>
 					{message}
 				</div>

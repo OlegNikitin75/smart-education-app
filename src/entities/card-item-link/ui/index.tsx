@@ -1,7 +1,7 @@
 'use client'
 
 import { FC, useRef } from 'react'
-import { UiButton, UiLink } from '../../../shared/ui'
+import { UiButton, UiIconButton, UiLink } from '../../../shared/ui'
 import { DeleteSvgComponent } from '../../../shared/icons'
 import { NAVIGATION } from '@/shared/constants/navigation'
 
@@ -63,13 +63,13 @@ export const CardItemLink: FC<ICardItemLinkProps> = ({ data, deleteItems }) => {
 								<span className='pl-4 font-play400'>{data.semester}</span>
 							</span>
 						</UiLink>
-						<UiButton
+						<UiIconButton
 							onClick={async () => deleteItems(data.id)}
-							variant='icon'
+							variant='basic'
 							className='min-w-16 bg-app-red'
 						>
-							<DeleteSvgComponent />
-						</UiButton>
+							<DeleteSvgComponent color='#F8F9FA' />
+						</UiIconButton>
 					</>
 				)}
 				<UiLink
@@ -79,13 +79,13 @@ export const CardItemLink: FC<ICardItemLinkProps> = ({ data, deleteItems }) => {
 				>
 					{data.title}
 				</UiLink>
-				<UiButton
+				<UiIconButton
 					onClick={async () => deleteItems(data.id)}
-					variant='icon'
+					variant='basic'
 					className='min-w-16 bg-app-red'
 				>
-					<DeleteSvgComponent />
-				</UiButton>
+					<DeleteSvgComponent color='#F8F9FA' />
+				</UiIconButton>
 			</div>
 		</li>
 	)

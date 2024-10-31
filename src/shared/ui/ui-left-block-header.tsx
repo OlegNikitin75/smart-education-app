@@ -20,7 +20,7 @@ export const UiLeftBlockHeader: FC<IUiLeftBlockHeaderProps> = ({
 				variant='back'
 				onClick={() => router.back()}
 			>
-				<ArrowBackSvgComponent />
+				<ArrowBackSvgComponent color='#CAFFBF' />
 				Назад
 			</UiButtonWithIcon>
 		</div>

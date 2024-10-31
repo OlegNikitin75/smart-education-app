@@ -31,7 +31,7 @@ export const AdminProfilePage = async () => {
 		>
 			<div className='flex h-full flex-col justify-between py-5'>
 				<div className='mb-6 flex items-center justify-center gap-12 text-app-light-gray'>
-					<AdminSvgComponent />
+					<AdminSvgComponent color='#6C757D' />
 					<div className='flex flex-col gap-2'>
 						<span className='font-play400 text-2xl'>
 							{session?.user?.lastName}

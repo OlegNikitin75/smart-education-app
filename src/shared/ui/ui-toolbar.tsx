@@ -30,7 +30,7 @@ export const UiToolbar: FC<IUiToolbarProps> = ({ editor, content }) => {
 						editor.isActive('bold') ? 'rounded-md bg-app-light-gray p-2' : ''
 					}
 				>
-					<TtBoldSvgComponent />
+					<TtBoldSvgComponent color='#F8F9FA' />
 				</button>
 				<button
 					onClick={event => {
@@ -41,7 +41,7 @@ export const UiToolbar: FC<IUiToolbarProps> = ({ editor, content }) => {
 						editor.isActive('italic') ? 'rounded-md bg-app-light-gray p-2' : ''
 					}
 				>
-					<TtItalicSvgComponent />
+					<TtItalicSvgComponent color='#F8F9FA' />
 				</button>
 				<button
 					onClick={event => {
@@ -54,7 +54,7 @@ export const UiToolbar: FC<IUiToolbarProps> = ({ editor, content }) => {
 							: ''
 					}
 				>
-					<TtUnderlineSvgComponent />
+					<TtUnderlineSvgComponent color='#F8F9FA' />
 				</button>
 
 				<button
@@ -68,7 +68,7 @@ export const UiToolbar: FC<IUiToolbarProps> = ({ editor, content }) => {
 							: ''
 					}
 				>
-					<TtListSvgComponent />
+					<TtListSvgComponent color='#F8F9FA' />
 				</button>
 				<button
 					onClick={event => {
@@ -81,7 +81,7 @@ export const UiToolbar: FC<IUiToolbarProps> = ({ editor, content }) => {
 							: ''
 					}
 				>
-					<TtListOrderSvgComponent />
+					<TtListOrderSvgComponent color='#F8F9FA' />
 				</button>
 
 				<button
@@ -93,7 +93,7 @@ export const UiToolbar: FC<IUiToolbarProps> = ({ editor, content }) => {
 						editor.isActive('undo') ? 'rounded-md bg-app-light-gray p-2' : ''
 					}
 				>
-					<TtUndoSvgComponent />
+					<TtUndoSvgComponent  color='#F8F9FA'/>
 				</button>
 				<button
 					onClick={event => {
@@ -104,10 +104,10 @@ export const UiToolbar: FC<IUiToolbarProps> = ({ editor, content }) => {
 						editor.isActive('redo') ? 'rounded-md bg-app-light-gray p-2' : ''
 					}
 				>
-					<TtRedoSvgComponent />
+					<TtRedoSvgComponent color= '#F8F9FA'/>
 				</button>
 			</div>
-			{content && <UiButton variant='secondary'>Готово</UiButton>}
+			{content && <UiButton variant='primary'>Готово</UiButton>}
 		</div>
 	)
 }

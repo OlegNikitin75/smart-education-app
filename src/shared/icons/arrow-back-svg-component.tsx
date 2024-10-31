@@ -1,4 +1,4 @@
-export const ArrowBackSvgComponent = ({}) => {
+export const ArrowBackSvgComponent = ({ color='#000000' }: { color: string}) => {
 	return (
 		<svg
 			width='24'
@@ -9,7 +9,7 @@ export const ArrowBackSvgComponent = ({}) => {
 		>
 			<path
 				d='M16.5 3L7.5 12.002L16.495 21'
-				stroke='#CAFFBF'
+				stroke={color}
 				strokeWidth='1.5'
 				strokeLinecap='round'
 				strokeLinejoin='round'

@@ -110,7 +110,7 @@ export const Login = () => {
 						variant='basic'
 						className='absolute right-4 top-1/2'
 					>
-						{showPassword ? <EyeSvgComponent /> : <EyeSlashSvgComponent />}
+						{showPassword ? <EyeSvgComponent /> : <EyeSlashSvgComponent color='#6C757D' />}
 					</UiIconButton>
 				</div>
 

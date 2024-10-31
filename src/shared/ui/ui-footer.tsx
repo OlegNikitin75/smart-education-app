@@ -22,7 +22,7 @@ export const UiFooter = () => {
 								className={`${pathname === NAVIGATION.app ? 'bg-app-green' : ''}`}
 								variant='navigation'
 								href={NAVIGATION.app}
-								icon={<HomeMenuSvgComponent />}
+								icon={<HomeMenuSvgComponent color='#6C757D' />}
 							>
 								{pathname === NAVIGATION.app && (
 									<span className='font-play400 text-[10px] text-app-dark'>
@@ -36,7 +36,7 @@ export const UiFooter = () => {
 								className={`${pathname === NAVIGATION.app_schedule ? 'bg-app-green' : ''}`}
 								variant='navigation'
 								href={NAVIGATION.app_schedule}
-								icon={<ScheduleMenuSvgComponent />}
+								icon={<ScheduleMenuSvgComponent color='#6C757D' />}
 							>
 								{pathname === NAVIGATION.app_schedule && (
 									<span className='font-play400 text-[10px] text-app-dark'>
@@ -50,7 +50,7 @@ export const UiFooter = () => {
 								className={`${pathname === NAVIGATION.app_courses ? 'bg-app-green' : ''}`}
 								variant='navigation'
 								href={NAVIGATION.app_courses}
-								icon={<CourseMenuSvgComponent />}
+								icon={<CourseMenuSvgComponent color='#6C757D' />}
 							>
 								{pathname === NAVIGATION.app_courses && (
 									<span className='font-play400 text-[10px] text-app-dark'>
@@ -64,7 +64,7 @@ export const UiFooter = () => {
 								className={`${pathname === NAVIGATION.app_profile ? 'bg-app-green' : ''}`}
 								variant='navigation'
 								href={NAVIGATION.app_profile}
-								icon={<UserMenuSvgComponent />}
+								icon={<UserMenuSvgComponent color='#6C757D'/>}
 							>
 								{pathname === NAVIGATION.app_profile && (
 									<span className='font-play400 text-[10px] text-app-dark'>

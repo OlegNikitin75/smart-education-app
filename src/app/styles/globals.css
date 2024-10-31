@@ -12,7 +12,7 @@ body,
 }
 
 body {
-	@apply bg-app-dark font-play400 lg:flex lg:items-center lg:justify-between text-app-white;
+	@apply bg-app-dark font-play400 lg:flex lg:items-center lg:justify-between;
 }
 input {
 	@apply outline-none;

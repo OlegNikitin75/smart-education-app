@@ -16,7 +16,7 @@ export const UiSuccessMessage: FC<IUiSuccessMessageProps> = ({
 			<div className='w-full h-full max-w-md mx-auto flex flex-col justify-between'>
 				<div></div>
 				<div className='flex flex-col items-center gap-6'>
-				<CheckSvgComponent />
+				<CheckSvgComponent color='#CAFFBF' />
 				<div className='text-center font-play700 text-4xl leading-normal text-app-white'>
 					{message}
 				</div>

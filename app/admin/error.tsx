@@ -18,7 +18,7 @@ export default function Error({
 	return (
 		<div className='flex flex-col justify-center bg-app-dark p-5'>
 			<div>
-				<ErrorSvgComponent />
+				<ErrorSvgComponent color='#FFADAD' />
 				<UiHeading tag='h2' className='text-app-light-gray'>
 					Что-то пошло не так!
 				</UiHeading>

@@ -1,4 +1,8 @@
-export function ArrowsUpDownSvgComponent() {
+export function ArrowsUpDownSvgComponent({
+	color = '#000000'
+}: {
+	color: string
+}) {
 	return (
 		<svg
 			width='20'
@@ -9,13 +13,13 @@ export function ArrowsUpDownSvgComponent() {
 		>
 			<path
 				d='M21.5 16.5L12.489 7.5L3.5 16.5'
-				stroke='#F8F9FA'
+				stroke={color}
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>
 			<path
 				d='M3.5 26.5L12.511 35.5L21.5 26.5'
-				stroke='#F8F9FA'
+				stroke={color}
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>
