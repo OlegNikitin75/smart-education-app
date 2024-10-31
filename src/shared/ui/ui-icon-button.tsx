@@ -1,22 +1,26 @@
 import { ButtonHTMLAttributes, MouseEventHandler } from 'react'
 import clsx from 'clsx'
 
-type UiButtonIconVariant = 'icon'
+type UiButtonVariant = 'basic'
 type UiButtonProps = {
 	onClick?: MouseEventHandler<HTMLButtonElement>
 	className?: string
-	variant: UiButtonIconVariant
+	variant: UiButtonVariant
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
-export const UiButtonIcon = ({ className, variant, ...props }: UiButtonProps) => {
+export const UiIconButton = ({
+	className,
+	variant,
+	...props
+}: UiButtonProps) => {
 	return (
 		<button
 			{...props}
 			className={clsx(
 				className,
-				'duration-300',
+				'flex items-center justify-center',
 				{
-					icon: 'flex items-center justify-center'
+					basic: ''
 				}[variant]
 			)}
 		/>

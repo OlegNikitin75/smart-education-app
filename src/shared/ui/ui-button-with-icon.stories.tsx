@@ -3,15 +3,17 @@ import { UiButtonWithIcon } from '.'
 import { ArrowBackSvgComponent } from '../icons'
 
 const meta: Meta<typeof UiButtonWithIcon> = {
-	title: 'Components/Button with icon',
+	title: 'Components/Buttons/Button with icon',
 	component: UiButtonWithIcon,
 	argTypes: {
 		variant: {
 			control: {
-				type: 'select'
+				type: 'radio'
 			},
 			options: ['back']
 		}
+		
+		
 	},
 	tags: ['autodocs']
 }
@@ -34,3 +36,4 @@ export const Back: Story = {
 		children: [<ArrowBackSvgComponent key='arrowBackLg' />, 'Назад']
 	}
 }
+

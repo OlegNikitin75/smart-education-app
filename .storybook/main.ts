@@ -1,7 +1,7 @@
 import type { StorybookConfig } from '@storybook/nextjs'
 
 const config: StorybookConfig = {
-	stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+	stories: ['../**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
 	addons: [
         '@storybook/addon-onboarding',
         '@storybook/addon-links',
@@ -9,7 +9,6 @@ const config: StorybookConfig = {
         '@chromatic-com/storybook',
         '@storybook/addon-interactions',
         '@storybook/addon-styling-webpack',
-				'@newhighsco/storybook-addon-svgr'
     ],
 	framework: {
 		name: '@storybook/nextjs',

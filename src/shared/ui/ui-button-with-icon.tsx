@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import { ButtonHTMLAttributes, MouseEventHandler } from 'react'
 
-type UiButtonWithIconVariant = 'back' 
+type UiButtonWithIconVariant = 'back' | 'icon'
 type UiButtonProps = {
 	onClick?: MouseEventHandler<HTMLButtonElement>
 	className?: string
@@ -20,8 +20,8 @@ export const UiButtonWithIcon = ({
 				className,
 				'duration-300',
 				{
-					back:
-						'flex items-center gap-2 text-app-green lg:opacity-65 lg:hover:opacity-100'
+					back: 'flex items-center gap-2 text-app-green lg:opacity-65 lg:hover:opacity-100',
+					icon: 'flex items-center justify-center'
 				}[variant]
 			)}
 		/>

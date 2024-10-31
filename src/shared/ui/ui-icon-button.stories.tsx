@@ -1,30 +1,29 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { UiButtonIcon } from '.'
-import {
-	EyeSlashSvgComponent,
-	EyeSvgComponent
-} from '../icons'
+import { UiIconButton } from '.'
+import {  EyeSlashSvgComponent, EyeSvgComponent } from '../icons'
 
-const meta: Meta<typeof UiButtonIcon> = {
-	title: 'Components/Button icon',
-	component: UiButtonIcon,
+const meta: Meta<typeof UiIconButton> = {
+	title: 'Components/Buttons/Icon Button',
+	component: UiIconButton,
 	argTypes: {
-    variant: {
-      control: {
-        type: 'select',
-      },
-      options: ['icon'],
-    },
-  },
-	tags: ['autodocs'],
-
+		variant: {
+			control: {
+				type: 'radio'
+			},
+			options: ['back','icon']
+		}
+		
+		
+	},
+	tags: ['autodocs']
 }
 
-type Story = StoryObj<typeof UiButtonIcon>
+type Story = StoryObj<typeof UiIconButton>
 
 export default meta
 
-export const ShowPassword: Story = {
+
+export const Basic: Story = {
 	parameters: {
 		docs: {
 			description: {
@@ -33,7 +32,7 @@ export const ShowPassword: Story = {
 		}
 	},
 	args: {
-		variant: 'icon',
+		variant: 'basic',
 		children: <EyeSlashSvgComponent />
 	}
 }
@@ -46,11 +45,7 @@ export const HidePassword: Story = {
 		}
 	},
 	args: {
-		variant: 'icon',
+		variant: 'basic',
 		children: <EyeSvgComponent />
 	}
 }
-
-
-
-

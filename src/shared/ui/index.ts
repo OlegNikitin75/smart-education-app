@@ -1,7 +1,7 @@
 export { UiAdminFooter } from './ui-admin-footer'
 export { UiButton } from './ui-button'
+export { UiIconButton } from './ui-icon-button'
 export { UiButtonWithIcon } from './ui-button-with-icon'
-export { UiButtonIcon } from './ui-button-icon'
 export { UiCheckbox } from './ui-checkbox'
 export { UiContainer } from './ui-container'
 export { UiErrorMessage } from './ui-error-message'

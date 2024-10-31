@@ -3,13 +3,15 @@ import '../src/app/styles/globals.css'
 
 const preview: Preview = {
 	parameters: {
-		layout:'centered',
 		backgrounds: {
 			default: 'dark',
-			values: [{
-				name: 'dark',
-				value: '#17191C'
-			}]
+			values: [
+				{
+					name: 'dark',
+					value: '#17191C'
+				},
+				{ name: 'light', value: '#F7F9F2' }
+			]
 		},
 		controls: {
 			matchers: {

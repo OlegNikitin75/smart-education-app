@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { UiButton } from '.'
 
 const meta: Meta<typeof UiButton> = {
-	title: 'Components/Button',
+	title: 'Components/Buttons/Button',
 	component: UiButton,
 	argTypes: {
 		variant: {

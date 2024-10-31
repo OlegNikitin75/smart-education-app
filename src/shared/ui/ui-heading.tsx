@@ -17,9 +17,9 @@ export function UiHeading({ className, tag, ...props }: UiHeadingProps) {
 				className,
 				'',
 				{
-					h1: 'font-play700 text-5xl leading-[110%] text-app-white',
+					h1: 'font-play700 text-5xl leading-[110%] ',
 					h2: 'font-play700 text-2xl leading-[120%]',
-					h3: 'font-play700 text-lg leading-[120%] text-app-white',
+					h3: 'font-play700 text-lg leading-[120%] ',
 				}[tag]
 			)}
 		/>

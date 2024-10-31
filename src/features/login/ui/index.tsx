@@ -9,7 +9,7 @@ import {
 	LockSvgComponent,
 	UserSvgComponent
 } from '@/shared/icons'
-import { UiButton, UiErrorMessage, UiInput, UiLoader } from '@/shared/ui'
+import { UiButton, UiButtonWithIcon, UiErrorMessage, UiIconButton, UiInput, UiLoader } from '@/shared/ui'
 import { useRouter } from 'next/navigation'
 import { NAVIGATION } from '@/shared/constants/navigation'
 
@@ -104,14 +104,14 @@ export const Login = () => {
 					{
 						showPassword
 					}
-					<UiButton
+					<UiIconButton
 						onClick={handleClick}
 						type='button'
-						variant='icon'
+						variant='basic'
 						className='absolute right-4 top-1/2'
 					>
 						{showPassword ? <EyeSvgComponent /> : <EyeSlashSvgComponent />}
-					</UiButton>
+					</UiIconButton>
 				</div>
 
 				<UiButton variant='primary'>Войти</UiButton>
